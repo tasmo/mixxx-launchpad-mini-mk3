@@ -18,19 +18,7 @@
       "path": "./packages/launch-common"
     },
     {
-      "path": "./packages/launchcontrol-common"
-    },
-    {
-      "path": "./packages/launchcontrol-xl-mk2"
-    },
-    {
       "path": "./packages/launchpad-common"
-    },
-    {
-      "path": "./packages/launchpad-mk2"
-    },
-    {
-      "path": "./packages/launchpad-mk1"
     },
     {
       "path": "./packages/launchpad-mini-mk3"

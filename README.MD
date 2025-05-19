@@ -21,17 +21,6 @@ Flexible and customizable [Mixxx](https://mixxx.org) controller mappings for the
 ## Supported controllers
 
 - Launchpad Mini Mk3
-- Launchpad X
-- Launchpad Mk2
-- Launchpad Mk1
-- LaunchControl XL MK2 (experimental)
-
-## Controller setup instructions
-
-### LaunchControl XL MK2
-
-Support is experimental, and any existing mapping may change in future versions. Feedback
-and PRs are welcome.
 
 ## How to get started
 
