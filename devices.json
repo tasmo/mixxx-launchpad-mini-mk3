@@ -1,4 +1,9 @@
 {
+  "launchpad-mk1": {
+    "device": "Launchpad",
+    "manufacturer": "Novation",
+    "global": "NLMK1"
+  },
   "launchpad-mk2": {
     "device": "Launchpad MK2",
     "manufacturer": "Novation",
