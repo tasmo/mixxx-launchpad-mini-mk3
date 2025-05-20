@@ -74,9 +74,9 @@ const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck }) => {
         } else {
           state[dir] = false
           if (getDirection(getValue(bindings.rate.control)) === dir) {
-            bindings[dir].sendColor(Color.OrangeLow)
+            bindings[dir].sendColor(Color.GrayHi)
           } else {
-            bindings[dir].clearColor()
+            bindings[dir].sendColor(Color.GrayLow)
           }
           modes(
             mode,
@@ -90,13 +90,13 @@ const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck }) => {
   const onRate =
     ({ bindings, state }: Control<Type>) =>
     ({ value }: ControlMessage) => {
-      let up = Color.Black
-      let down = Color.Black
+      let up = Color.VioletLow
+      let down = Color.BlueLow
       const rate = getDirection(value)
       if (rate === 'down') {
-        down = Color.OrangeLow
+        down = Color.BlueHi
       } else if (rate === 'up') {
-        up = Color.OrangeLow
+        up = Color.VioletHi
       }
 
       if (!state.down) {

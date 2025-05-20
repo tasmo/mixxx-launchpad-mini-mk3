@@ -193,7 +193,7 @@ export default class App extends Container {
       }
     }
     this.chord.push(channel)
-    this.bindings[channel][0].sendColor(Color.RedHi)
+    this.bindings[channel][0].sendColor(Color.WhiteHi)
   }
 
   override onMount() {

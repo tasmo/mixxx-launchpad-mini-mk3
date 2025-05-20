@@ -4,6 +4,7 @@ import { PadBindingTemplate, MakeDeckControlTemplate, Control, cellPad } from '.
 import { modes } from '@mixxx-launch/common/modifier'
 import { onAttack } from '@mixxx-launch/common/midi'
 import { MidiMessage } from '@mixxx-launch/common/midi'
+import { Color } from '@mixxx-launch/launch-common'
 
 export type Type = {
   type: 'loopIo'
@@ -50,12 +51,22 @@ const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck }) => {
         type: cellPad(gridPosition),
         listeners: {
           midi: onMidi('in'),
+          mount:
+            ({ bindings }: Control<Type>) =>
+            () => {
+              bindings.in.sendColor(Color.GreenLow)
+            },
         },
       },
       out: {
         type: cellPad([gridPosition[0] + 1, gridPosition[1]]),
         listeners: {
           midi: onMidi('out'),
+          mount:
+            ({ bindings }: Control<Type>) =>
+            () => {
+              bindings.out.sendColor(Color.RedLow)
+            },
         },
       },
     },

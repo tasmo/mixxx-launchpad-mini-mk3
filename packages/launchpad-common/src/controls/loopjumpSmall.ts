@@ -32,7 +32,7 @@ const make: MakeDeckControlTemplate<Type> = ({ amount, gridPosition, deck }) => 
           mount:
             ({ bindings }: Control<Type>) =>
             () => {
-              bindings.back.sendColor(Color.YellowHi)
+              bindings.back.sendColor(Color.PurpleLow)
             },
         },
       },
@@ -43,7 +43,7 @@ const make: MakeDeckControlTemplate<Type> = ({ amount, gridPosition, deck }) => 
           mount:
             ({ bindings }: Control<Type>) =>
             () => {
-              bindings.forth.sendColor(Color.YellowHi)
+              bindings.forth.sendColor(Color.CyanLow)
             },
         },
       },

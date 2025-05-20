@@ -33,7 +33,7 @@ const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck }) => ({
         update:
           ({ bindings }: Control<Type>) =>
           ({ value }: ControlMessage) =>
-            value ? bindings.button.sendColor(Color.GreenHi) : bindings.button.clearColor(),
+            value ? bindings.button.sendColor(Color.AmberHi) : bindings.button.sendColor(Color.AmberLow),
       },
     },
     button: {
