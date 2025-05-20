@@ -90,6 +90,8 @@ const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck }) => {
   const onRate =
     ({ bindings, state }: Control<Type>) =>
     ({ value }: ControlMessage) => {
+      let up = Color.VioletLow
+      let down = Color.BlueLow
       const rate = getDirection(value)
       const down = rate === 'down' ? Color.BlueHi : Color.Black
       const up = rate === 'up' ? Color.VioletHi : Color.Black
