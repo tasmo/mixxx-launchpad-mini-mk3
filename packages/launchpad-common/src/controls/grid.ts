@@ -34,7 +34,7 @@ const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck }) => {
     ({ bindings, context: { modifier } }: Control<Type>) =>
     ({ value }: MidiMessage) => {
       if (!value) {
-        bindings[dir].clearColor()
+        bindings[dir].sendColor(Color.GrayLow)
       } else {
         modes(
           modifier.getState(),
@@ -55,12 +55,22 @@ const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck }) => {
         type: cellPad(gridPosition),
         listeners: {
           midi: onGrid('back'),
+          mount:
+            ({ bindings }: Control<Type>) =>
+            () => {
+              bindings.back.sendColor(Color.GrayLow)
+            },
         },
       },
       forth: {
         type: cellPad([gridPosition[0] + 1, gridPosition[1]]),
         listeners: {
           midi: onGrid('forth'),
+          mount:
+            ({ bindings }: Control<Type>) =>
+            () => {
+              bindings.forth.sendColor(Color.GrayLow)
+            },
         },
       },
     },

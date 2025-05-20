@@ -56,7 +56,7 @@ const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck }) => {
               if (value) {
                 bindings.tap.sendColor(Color.RedHi)
               } else {
-                bindings.tap.clearColor()
+                bindings.tap.sendColor(Color.GrayHi)
               }
             },
         },

@@ -20,22 +20,29 @@ export default class ModifierSidebar extends Component implements Modifier {
 
     const makeListener = (button: Pad) => (message: MidiMessage) => {
       const { value } = message
-      if (value) {
-        button.sendColor(Color.RedHi)
-      } else {
-        button.clearColor()
-      }
 
       if (button.control.name === device.controls.solo.name) {
         this.state ^= ModifierState.Shift
         this.emit('update', this.state)
+        if (value) {
+          button.sendColor(Color.BlueHi)
+        } else {
+          button.sendColor(Color.BlueLow)
+        }
       } else {
         this.state ^= ModifierState.Ctrl
         this.emit('update', this.state)
+        if (value) {
+          button.sendColor(Color.BrownHi)
+        } else {
+          button.sendColor(Color.BrownLow)
+        }
       }
     }
     this.shiftListener = makeListener(this.shift)
+    this.shift.sendColor(Color.BlueLow)
     this.ctrlListener = makeListener(this.ctrl)
+    this.ctrl.sendColor(Color.BrownLow)
   }
 
   override onMount() {
