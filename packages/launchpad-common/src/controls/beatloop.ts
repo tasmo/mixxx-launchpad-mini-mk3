@@ -40,7 +40,7 @@ const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck, loops, rows }
     (i: number) =>
     ({ bindings }: Control<Type>) =>
     ({ value }: ControlMessage) => {
-      const color = value ? Color.RedHi : Color.RedLow
+      const color = value ? Color.CyanHi : Color.CyanLow
       bindings[`b.${i}`].sendColor(color)
     }
 

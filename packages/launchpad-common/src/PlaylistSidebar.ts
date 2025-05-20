@@ -75,18 +75,18 @@ export default class PlaylistSidebar extends Container {
     }
 
     const onMidi =
-      (control: ControlDef, color: Color = Color.YellowHi) =>
+      (control: ControlDef, color: Color = Color.GrayLow) =>
       (message: MidiMessage) => {
         if (message.value) {
           setValue(control, 1)
-          device.sendColor(message.control, Color.RedHi)
+          device.sendColor(message.control, Color.YellowHi)
         } else {
           device.sendColor(message.control, color)
         }
       }
 
     const onMount =
-      (color: Color = Color.YellowHi) =>
+      (color: Color = Color.GrayLow) =>
       (button: Pad) => {
         button.sendColor(color)
       }
@@ -123,15 +123,15 @@ export default class PlaylistSidebar extends Container {
     nextTrack.on('mount', onMount())
     nextTrack.on('unmount', onUnmount)
 
-    toggleItem.on('midi', onMidi(playListControlDef.ToggleSelectedSidebarItem, Color.GreenHi))
-    toggleItem.on('mount', onMount(Color.GreenHi))
+    toggleItem.on('midi', onMidi(playListControlDef.ToggleSelectedSidebarItem, Color.GreenLow))
+    toggleItem.on('mount', onMount(Color.GreenLow))
     toggleItem.on('unmount', onUnmount)
 
     toggleLibraryControl.on('update', (m: ControlMessage) => {
       if (m.value) {
-        toggleLibrary.sendColor(Color.RedHi)
-      } else {
         toggleLibrary.sendColor(Color.GreenHi)
+      } else {
+        toggleLibrary.sendColor(Color.GreenLow)
       }
     })
 

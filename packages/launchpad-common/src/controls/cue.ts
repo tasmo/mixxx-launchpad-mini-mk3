@@ -49,7 +49,7 @@ const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck }) => ({
           ({ bindings: { cue } }: Control<Type>) =>
           ({ value }: ControlMessage) => {
             if (value) {
-              cue.sendColor(Color.RedHi)
+              cue.sendColor(Color.PinkHi)
             } else if (!value) {
               cue.sendColor(Color.PinkLow)
             }

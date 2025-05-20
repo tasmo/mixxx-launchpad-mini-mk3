@@ -25,8 +25,8 @@ export type Type = {
 }
 
 const colors = [
-  { off: Color.GreenLow, on: Color.GreenHi },
-  { off: Color.RedLow, on: Color.RedHi },
+  { off: Color.VioletLow, on: Color.VioletHi },
+  { off: Color.PurpleLow, on: Color.PurpleHi },
 ]
 
 const make: MakeDeckControlTemplate<Type> = ({ deck, gridPosition, jumps, vertical = false, bounce = false }) => {

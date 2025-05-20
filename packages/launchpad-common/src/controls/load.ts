@@ -28,11 +28,11 @@ export type Type = {
 const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck }) => {
   const onStateChanged = (loaded: number, playing: number, bindings: Control<Type>['bindings']) => {
     if (loaded && playing) {
-      bindings.button.sendColor(Color.RedLow)
+      bindings.button.clearColor()
     } else if (loaded) {
-      bindings.button.sendColor(Color.YellowLow)
+      bindings.button.sendColor(Color.YellowHi)
     } else {
-      bindings.button.sendColor(Color.GreenLow)
+      bindings.button.sendColor(Color.YellowLow)
     }
   }
   return {
