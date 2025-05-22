@@ -45,7 +45,9 @@
     "packages/mixxx",
     "packages/launch-common",
     "packages/launchpad-common",
-    "packages/launchpad-mini-mk3"
+    "packages/launchpad-mk2",
+    "packages/launchpad-mini-mk3",
+    "packages/launchpad-x"
   ],
   "repository": {
     "type": "git",

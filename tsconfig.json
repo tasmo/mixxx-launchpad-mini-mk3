@@ -21,6 +21,9 @@
       "path": "./packages/launchpad-common"
     },
     {
+      "path": "./packages/launchpad-mk2"
+    },
+    {
       "path": "./packages/launchpad-mini-mk3"
     },
     {

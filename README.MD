@@ -21,6 +21,8 @@ Flexible and customizable [Mixxx](https://mixxx.org) controller mappings for the
 ## Supported controllers
 
 - Launchpad Mini Mk3
+- Launchpad X
+- Launchpad Mk2
 
 ## How to get started
 

@@ -1,7 +1,17 @@
 {
+  "launchpad-mk2": {
+    "device": "Launchpad MK2",
+    "manufacturer": "Novation",
+    "global": "NLMK2"
+  },
   "launchpad-mini-mk3": {
     "device": "Launchpad Mini MK3",
     "manufacturer": "Novation",
     "global": "NLMMK3"
+  },
+  "launchpad-x": {
+    "device": "Launchpad X",
+    "manufacturer": "Novation",
+    "global": "NLX"
   }
 }
