@@ -8,6 +8,7 @@ export default () => ({
     user1: [176, 96],
     user2: [176, 97],
     mixer: [176, 98],
+    logo: [176, 99],
     vol: [176, 89],
     pan: [176, 79],
     snda: [176, 69],
