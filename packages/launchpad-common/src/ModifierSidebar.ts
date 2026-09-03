@@ -21,6 +21,8 @@ export default class ModifierSidebar extends Component implements Modifier {
     const makeListener = (button: Pad) => (message: MidiMessage) => {
       const { value } = message
 
+      this.state ^= button.control.name === device.controls.solo.name ? ModifierState.Shift : ModifierState.Ctrl
+      this.emit('update', this.state)
       if (button.control.name === device.controls.solo.name) {
         this.state ^= ModifierState.Shift
         this.emit('update', this.state)

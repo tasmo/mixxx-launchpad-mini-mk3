@@ -48,16 +48,4 @@ export abstract class LaunchDevice extends MidiDevice {
   }
 
   abstract sendRGBColor(control: MidiControlDef, value: RGBColor): void
-
-  constructor() {
-    super()
-  }
-
-  override onMount() {
-    super.onMount()
-  }
-
-  override onUnmount() {
-    super.onUnmount()
-  }
 }

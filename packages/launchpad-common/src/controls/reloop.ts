@@ -45,11 +45,7 @@ const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck }) => ({
         update:
           ({ bindings }: Control<Type>) =>
           ({ value }: ControlMessage) => {
-            if (value) {
-              bindings.button.sendColor(Color.CyanHi)
-            } else {
-              bindings.button.sendColor(Color.CyanLow)
-            }
+            bindings.button.sendColor(value ? Color.CyanHi : Color.CyanLow)
           },
       },
     },
