@@ -47,7 +47,10 @@
     "packages/launchpad-common",
     "packages/launchpad-mk2",
     "packages/launchpad-mini-mk3",
-    "packages/launchpad-x"
+    "packages/launchpad-x",
+    "packages/launchpad-pro-mk3",
+    "packages/launchcontrol-common",
+    "packages/launchcontrol-xl-mk2"
   ],
   "repository": {
     "type": "git",
