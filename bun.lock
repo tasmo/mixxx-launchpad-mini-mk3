@@ -47,6 +47,22 @@
         "@mixxx-launch/mixxx": "~1.0.0",
       },
     },
+    "packages/launchcontrol-common": {
+      "name": "@mixxx-launch/launchcontrol-common",
+      "version": "1.0.0",
+      "dependencies": {
+        "@mixxx-launch/launch-common": "~1.0.0",
+        "@mixxx-launch/mixxx": "~1.0.0",
+      },
+    },
+    "packages/launchcontrol-xl-mk2": {
+      "name": "@mixxx-launch/launchcontrol-xl-mk2",
+      "version": "1.0.0",
+      "dependencies": {
+        "@babel/runtime-corejs3": "^7.27.0",
+        "@mixxx-launch/launchcontrol-common": "1.0.0",
+      },
+    },
     "packages/launchpad-common": {
       "name": "@mixxx-launch/launchpad-common",
       "version": "1.0.0",
@@ -58,6 +74,14 @@
     },
     "packages/launchpad-mini-mk3": {
       "name": "@mixxx-launch/launchpad-mini-mk3",
+      "version": "1.0.0",
+      "dependencies": {
+        "@babel/runtime-corejs3": "^7.27.0",
+        "@mixxx-launch/launchpad-common": "1.0.0",
+      },
+    },
+    "packages/launchpad-mk1": {
+      "name": "@mixxx-launch/launchpad-mk1",
       "version": "1.0.0",
       "dependencies": {
         "@babel/runtime-corejs3": "^7.27.0",
@@ -356,9 +380,15 @@
 
     "@mixxx-launch/launch-common": ["@mixxx-launch/launch-common@workspace:packages/launch-common"],
 
+    "@mixxx-launch/launchcontrol-common": ["@mixxx-launch/launchcontrol-common@workspace:packages/launchcontrol-common"],
+
+    "@mixxx-launch/launchcontrol-xl-mk2": ["@mixxx-launch/launchcontrol-xl-mk2@workspace:packages/launchcontrol-xl-mk2"],
+
     "@mixxx-launch/launchpad-common": ["@mixxx-launch/launchpad-common@workspace:packages/launchpad-common"],
 
     "@mixxx-launch/launchpad-mini-mk3": ["@mixxx-launch/launchpad-mini-mk3@workspace:packages/launchpad-mini-mk3"],
+
+    "@mixxx-launch/launchpad-mk1": ["@mixxx-launch/launchpad-mk1@workspace:packages/launchpad-mk1"],
 
     "@mixxx-launch/launchpad-mk2": ["@mixxx-launch/launchpad-mk2@workspace:packages/launchpad-mk2"],
 
