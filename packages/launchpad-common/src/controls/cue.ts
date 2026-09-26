@@ -52,8 +52,6 @@ const make: MakeDeckControlTemplate<Type> = ({ gridPosition, deck }) => ({
               cue.sendColor(Color.PinkHi)
             } else {
               cue.sendColor(Color.PinkLow)
-            } else {
-              cue.clearColor()
             }
           },
       },
